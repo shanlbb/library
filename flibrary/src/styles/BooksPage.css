@@ -1,0 +1,50 @@
+.book-page_header {
+    font-size: 46px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.count-books {
+    font-size: 16px;
+    color: #8C8C8C;
+}
+
+.sort-selection {
+
+}
+
+.sort-selection_label {
+    font-weight: 600;
+    font-size: 18px;
+    padding-right: 9px;
+}
+
+.sort-selection_select {
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid silver;
+    padding: 9px 18px;
+    font-weight: 600;
+    font-size: 18px;
+    outline: none;
+}
+
+.sort-selection_select:hover {
+    border: 1px solid #FFCF48;
+}
+
+.book-page_container {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+}
+
+.books {
+    width: 70%;
+    margin-right: auto;
+}
+
+.genres {
+    width: 25%;
+    margin-left: auto;
+}

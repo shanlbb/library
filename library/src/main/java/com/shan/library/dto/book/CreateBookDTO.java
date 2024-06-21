@@ -1,6 +1,7 @@
 package com.shan.library.dto.book;
 
 import com.shan.library.dto.author.CreateAuthorDTO;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -15,11 +16,10 @@ public class CreateBookDTO {
     @NotBlank
     private String title;
 
-    @NotBlank
     private String description;
 
     @NotNull
-    @Size(min = 1)
+    @Min(1)
     private Integer pages;
 
     private LocalDate publishDate;

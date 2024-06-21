@@ -8,8 +8,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.Set;
+import java.util.UUID;
 
 public interface IAuthorService {
+
+    Author getById(@NonNull UUID id);
+
     Set<Author> getOrCreate(@NonNull Set<CreateAuthorDTO> createAuthorDTOSet);
 
     Page<Author> getAuthors(@NonNull AuthorFilter authorFilter, @NonNull Pageable pageable);

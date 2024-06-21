@@ -57,7 +57,7 @@ public class BookService implements IBookService {
     public Book update(@NonNull Book book, Set<CreateAuthorDTO> createAuthorDTOSet, Set<String> genreNames,
                        @NonNull UUID userId) {
         Book updatedBook = this.getById(book.getId());
-        if (!book.getUser().getId().equals(userId))
+        if (!updatedBook.getUser().getId().equals(userId))
             throw new ForbiddenException("Access denied");
 
         if (book.getTitle() != null)

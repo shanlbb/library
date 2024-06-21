@@ -1,0 +1,46 @@
+.footer {
+    margin-top: 24px;
+}
+
+.footer-gradient {
+    height: 6px;
+    background: linear-gradient(to bottom, #f3f3f3, #FFF7E6);
+}
+
+.footer-content {
+    display: flex;
+    background: #FFF7E6;
+}
+
+.footer-left {
+    width: 30%;
+}
+
+.footer-name {
+    font-size: 21px;
+    margin-left: 21px;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+.footer-year {
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: 21px;
+}
+
+.footer-center {
+    margin: auto;
+}
+
+.footer-link {
+    padding: 9px;
+}
+
+.footer-img {
+    width: 36px;
+}
+
+.footer-right {
+    width: 30%;
+}

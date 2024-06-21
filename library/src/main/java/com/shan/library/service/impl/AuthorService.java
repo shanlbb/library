@@ -2,6 +2,7 @@ package com.shan.library.service.impl;
 
 import com.shan.library.dto.author.CreateAuthorDTO;
 import com.shan.library.entity.book.Author;
+import com.shan.library.exception.notfond.EntityNotFoundException;
 import com.shan.library.filter.AuthorFilter;
 import com.shan.library.repository.IAuthorRepository;
 import com.shan.library.service.intf.IAuthorService;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -21,6 +23,11 @@ public class AuthorService implements IAuthorService {
 
     public AuthorService(IAuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
+    }
+
+    @Override
+    public Author getById(@NonNull UUID id) {
+        return authorRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Author not found"));
     }
 
     @Override

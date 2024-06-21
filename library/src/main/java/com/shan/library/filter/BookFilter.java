@@ -10,7 +10,6 @@ import jakarta.persistence.criteria.Join;
 import jakarta.persistence.criteria.JoinType;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
-import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.jpa.domain.Specification;
@@ -74,12 +73,14 @@ public class BookFilter implements Specification<Book> {
         String[] terms = searchTerms.split(" ");
         Predicate predicate  = criteriaBuilder.disjunction();
         for (String term : terms) {
-            predicate = criteriaBuilder.or(
-                    predicate,
-                    hasTitle(root, criteriaBuilder, term),
-                    hasAuthorLastName(root, criteriaBuilder, term),
-                    hasAuthorFirstName(root, criteriaBuilder, term)
-            );
+            if (term.length() > 2) {
+                predicate = criteriaBuilder.or(
+                        predicate,
+                        hasTitle(root, criteriaBuilder, term),
+                        hasAuthorLastName(root, criteriaBuilder, term),
+                        hasAuthorFirstName(root, criteriaBuilder, term)
+                );
+            }
         }
         return predicate;
     }

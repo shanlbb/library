@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class BookCoverFile extends File {
+    
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "book_id")
     private Book book;

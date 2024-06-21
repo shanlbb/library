@@ -1,0 +1,173 @@
+.book-page-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.book-page-imgs-container {
+    position: relative;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-page-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Помещаем фон позади содержимого */
+}
+
+.book-page-background_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Растягиваем изображение, сохраняя соотношение сторон */
+    filter: blur(18px); /* Применяем размытие */
+}
+
+.book-page-cover {
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    padding-top: 24px;
+    margin-right: -24px;
+    margin-bottom: auto;
+    width: 50%; /* Устанавливаем ширину для уменьшенного изображения */
+    height: auto; /* Автоматическая высота */
+}
+
+.book-page-cover_img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid silver;
+}
+
+.book-page-info {
+    width: 40%;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    background: rgb(255, 255, 255);
+}
+
+.book-page-rating-line {
+    display: flex;
+    margin-top: 24px;
+}
+
+.book-page-rating {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8C8C8C;
+    padding-left: 7px;
+    margin: 0;
+}
+
+.book-page-title {
+    font-size: 46px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.book-page-author {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #B34D00;
+    margin-top: 14px;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.book-page-details {
+    display: flex;
+    color: #8C8C8C;
+}
+
+.book-page-date {
+    padding-left: 14px;
+}
+
+.book-page-downloads {
+    border-radius: 12px;
+    font-size: 18px;
+
+    background: rgb(255, 247, 230);
+}
+
+.book-page-downloads-message {
+    text-align: center;
+    font-weight: 600;
+    padding: 9px 18px;
+    margin: 0;
+}
+
+.book-download-button {
+    width: 100%;
+    padding: 9px 18px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    background-color: #FFCF48;
+}
+
+.book-page-description {
+    margin: 0;
+    font-size: 16px;
+}
+
+.book-page-genres {
+    display: flex;
+}
+
+.book-page-genre {
+    margin-right: 4px;
+    margin-bottom: 4px;
+    border: 1px solid rgb(179, 77, 0);
+    border-radius: 8px;
+    padding: 4px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    color: #B34D00;
+    text-decoration: none;
+}
+
+.book-page-genre:hover {
+    background: #B34D00;
+    color: #ffffff;
+}
+
+
+
+.book-page-user {
+    width: 25%;
+    padding: 0 24px;
+    background: rgb(255, 255, 255);
+}
+
+.book-page-user-h2 {
+    margin-bottom: 8px;
+    margin-top: 70px;
+}
+
+.book-page-username {
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #B34D00;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.book-page-reviews {
+    width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+

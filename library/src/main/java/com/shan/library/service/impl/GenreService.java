@@ -1,6 +1,7 @@
 package com.shan.library.service.impl;
 
 import com.shan.library.entity.book.Genre;
+import com.shan.library.exception.notfond.EntityNotFoundException;
 import com.shan.library.repository.IGenreRepository;
 import com.shan.library.service.intf.IGenreService;
 import lombok.NonNull;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -19,6 +21,11 @@ public class GenreService implements IGenreService {
 
     public GenreService(IGenreRepository genreRepository) {
         this.genreRepository = genreRepository;
+    }
+
+    @Override
+    public Genre getById(@NonNull UUID id) {
+        return genreRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Genre not found"));
     }
 
     @Override

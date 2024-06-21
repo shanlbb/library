@@ -41,7 +41,6 @@
     border: 1px solid silver;
     padding: 9px 18px;
     width: 100%;
-    font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #6a6a6a;
@@ -53,11 +52,11 @@
 }
 
 .search-form_input:hover {
-    border: 1px solid rgb(217, 217, 21);
+    border: 1px solid #FFCF48;
 }
 
 .search-form_input:focus {
-    border: 1px solid rgb(217, 217, 21);
+    border: 1px solid #FFCF48;
 }
 
 .search_form_button {
